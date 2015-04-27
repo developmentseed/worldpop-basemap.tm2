@@ -25,7 +25,7 @@ maintain or invert existing value (light to dark) scale.
 @fill4: #000;
 @fill5: #7a7a7a;
 
-@text: #777;
+@text: #333;
 
 
 Map {
@@ -115,7 +115,7 @@ Map {
 
 // Water color is calculated by sampling the resulting color from
 // the soft-light comp-op in the #water layer style above. 
-@water: #2e2e2e;
+@water: lighten(#2e2e2e, 20%);
 
 #waterway {
   [type='river'],

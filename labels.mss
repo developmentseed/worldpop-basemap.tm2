@@ -7,6 +7,7 @@
   text-fill: @text;
   text-size: 12;
   text-halo-fill: @land;
+  text-halo-opacity: .333;
   text-halo-radius: 1;
   text-wrap-width: 50;
   [zoom>=3][scalerank=1],
@@ -55,8 +56,8 @@
     shield-placement: point;
     shield-fill: @text;
     shield-halo-fill: @fill1;
-    shield-halo-radius: 2;
-    shield-halo-rasterizer: fast;
+    shield-halo-radius: 1;
+    shield-halo-opacity: .333;
     shield-margin:30;
     shield-opacity:0.5;
     [zoom=7] { shield-size: 14; }
@@ -78,12 +79,16 @@
   text-wrap-width: 80;
   text-wrap-before: true;
   text-fill: @text;
-  text-halo-fill: @fill1;
+  text-halo-fill: @fill2;
+  text-halo-opacity: .333;
   text-halo-radius: 1;
-  text-halo-rasterizer: fast;
   text-size: 10;
   text-line-spacing:-2;
   text-margin:25;
+  
+  [zoom>=10] {
+    text-halo-opacity: 1;
+  }
 
   // Cities
   [type='city'][zoom>=8][zoom<=15] {
@@ -106,8 +111,6 @@
   // Towns
   [type='town'] {
     text-size: 12;    
-    text-halo-fill: @fill1;
-    text-halo-radius: 1;
     [zoom>=12] { text-size: 12; }
     [zoom>=14] { text-size: 16; }
     [zoom>=16] { text-size: 22; }
@@ -118,8 +121,6 @@
   // Villages and suburbs
   [type='village'] {
     text-size: 12;    
-    text-halo-fill: @fill1;
-    text-halo-radius: 1;
     [zoom>=12] { text-size: 10; }
     [zoom>=14] { text-size: 14; }
     [zoom>=16] { text-size: 18; }
@@ -127,11 +128,9 @@
   [type='hamlet'],
   [type='suburb'],
   [type='neighbourhood'] {
-    text-fill: @fill3;
     text-face-name:	@sans_it;
     text-transform: none;
     text-margin:50;
-    text-halo-radius: 1;
     text-character-spacing: 0.5;
     text-size: 12;
     [zoom>=14] { text-size: 14; }
@@ -150,6 +149,7 @@
   text-size: 9;
   text-min-distance: 100;
   text-halo-fill: @land;
+  text-halo-opacity: .333;
   text-halo-radius: 1;
   text-fill: @text;
   [zoom>=17] { text-size: 11;}
@@ -163,6 +163,7 @@
   text-size: 12;
   text-halo-fill: @water;
   text-halo-radius: 1;
+  text-halo-opacity: .333;
   text-wrap-before: true;
   text-wrap-width: 90;
   [labelrank=1] {
@@ -181,6 +182,7 @@
     text-size: 12;
     text-halo-fill: @water;
     text-halo-radius: 1;
+    text-halo-opacity: .333;
     text-wrap-width: 60;
     text-wrap-before: true;
     text-avoid-edges: true;
@@ -196,6 +198,7 @@
   text-min-distance: 60;
   text-size: 10;
   text-halo-fill: @water;
+  text-halo-opacity: .333;
   text-halo-radius: 1;
   text-wrap-before: true;
   text-avoid-edges: true;
@@ -217,6 +220,7 @@
   text-min-distance: 50;
   text-wrap-width: 60;
   text-halo-fill: @fill1;
+  text-halo-opacity: .333;
   text-halo-radius: 1;
   text-fill: @text;
 }
