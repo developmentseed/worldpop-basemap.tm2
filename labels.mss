@@ -79,15 +79,15 @@
   text-wrap-width: 80;
   text-wrap-before: true;
   text-fill: @text;
-  text-halo-fill: @fill2;
-  text-halo-opacity: .333;
+  text-halo-fill: darken(@fill1, 15%);
+  text-halo-opacity: 1;
   text-halo-radius: 1;
   text-size: 10;
   text-line-spacing:-2;
   text-margin:25;
   
   [zoom>=10] {
-    text-halo-opacity: 1;
+    text-halo-fill: darken(@fill1, 20%);
   }
 
   // Cities
