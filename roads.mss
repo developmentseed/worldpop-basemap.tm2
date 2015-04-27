@@ -1,11 +1,11 @@
 // dummy styles to set ordering (case below fill)
 #tunnel, #bridge, #road {
-  ::case { opacity: 1; }
-  ::fill { opacity: 1; }
+  ::case { opacity: 0.4; }
+  ::fill { opacity: 0.4; }
 } 
 
 // consistent case size
-@case: 2;
+@case: 0;
 
 // Road & Railway Fills //
 #tunnel { opacity: 0.5; }
@@ -13,6 +13,7 @@
 #road[zoom<11],
 #tunnel[zoom<11],
 #bridge[zoom<11] {
+    line-opacity: 0.4;
     line-color: @road;
     line-width: 0.5;
   [class='motorway'] { line-width: 1;}
@@ -21,6 +22,7 @@
 #road::fill[zoom>=11],
 #tunnel::fill[zoom>=11],
 #bridge::fill[zoom>=11] {
+  line-opacity: 0.3;
   ['mapnik::geometry_type'=2] {
     line-color: @road;
     line-width: 0.5;
@@ -29,11 +31,12 @@
     [class='major_rail'],
     [class='minor_rail'] { line-dasharray: 3,3; }
     [class='motorway'] { 
+      line-opacity: 0.2;
       [zoom>=11] { line-width: 2; }
-      [zoom>=12] { line-width: 3; }
-      [zoom>=14] { line-width: 4; }
-      [zoom>=16] { line-width: 7; }
-      [zoom>=18] { line-width: 10; }
+      [zoom>=12] { line-width: 2; }
+      [zoom>=14] { line-width: 3; }
+      [zoom>=16] { line-width: 5; }
+      [zoom>=18] { line-width: 7; }
     }
     [class='motorway_link'],
     [class='main'] {
@@ -57,6 +60,7 @@
 #road::case[zoom>=11],
 #tunnel::case[zoom>=11],
 #bridge::case[zoom>=11] {
+  line-opacity: 0.3;
   ['mapnik::geometry_type'=2] {
     line-color: @land;
     line-width: 1;
