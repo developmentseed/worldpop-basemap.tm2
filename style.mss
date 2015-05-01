@@ -1,3 +1,7 @@
+/**
+* Modified from https://github.com/mapbox/mapbox-studio-light.tm2 
+* ( (c) Mapbox)
+*/
 // Languages: name (local), name_en, name_fr, name_es, name_de
 @name: '[name_en]';
 
@@ -18,6 +22,8 @@ maintain or invert existing value (light to dark) scale.
 // Color palette //
 @road:  #fff;
 @land:  #eee;
+// just for waterways (for bodies of water, see #water below)
+@water: lighten(#2e2e2e, 30%);
 
 @fill1: #fff;
 @fill2: #bbb;
@@ -52,6 +58,33 @@ Map {
   [zoom>=6] { line-width: 1.5; }
   [zoom>=8] { line-width: 1.8; }
 }
+
+// ****************
+// Special case hack for nepal admin boundaries.
+
+#npl-admin-2,
+#npl-admin-3,
+#npl-admin-4,
+#npl-admin-5 {
+  line-join: round;
+  line-color: darken(@fill5, 10%);
+  line-width: 0;
+}
+
+#npl-admin-2 {
+  [zoom>=8] { line-width: 1.8; }
+  [zoom>=10] { line-width: 3; }
+}
+
+#npl-admin-3 {
+  [zoom>=9] { line-width: 0.8; }
+  [zoom>=10] { line-width: 1.6; }
+}
+
+#npl-admin-4 {
+  [zoom>=11] { line-width: 0.8; line-dasharray: 2;}
+}
+
 
 // Land Features //
 #landuse[class='cemetery'],
@@ -113,22 +146,19 @@ Map {
   }
 }
 
-// Water color is calculated by sampling the resulting color from
-// the soft-light comp-op in the #water layer style above. 
-@water: lighten(#2e2e2e, 20%);
 
 #waterway {
   [type='river'],
   [type='canal'] {
     line-color: @water;
-    line-width: 0.5;
+    line-width: 0.3;
     [zoom>=12] { line-width: 1; }
     [zoom>=14] { line-width: 2; }
     [zoom>=16] { line-width: 3; }
   }
   [type='stream'] {
     line-color: @water;
-    line-width: 0.5;
+    line-width: 0.3;
     [zoom>=14] { line-width: 1; }
     [zoom>=16] { line-width: 2; }
     [zoom>=18] { line-width: 3; }
