@@ -11,9 +11,9 @@ bounds:
   - 180
   - 85.0511
 center: 
-  - 85.3397
-  - 27.6817
-  - 11
+  - 45.3076
+  - 23.8858
+  - 6
 description: ''
 format: "png8:m=h"
 interactivity_layer: ''
@@ -21,7 +21,7 @@ layers: null
 maxzoom: 22
 minzoom: 0
 name: worldpop - basemap
-source: "mapbox:///devseed.e0v5z5mi,devseed.oexqd7vi,devseed.nepal-admin-boundaries,mapbox.mapbox-streets-v5"
+source: "mapbox:///devseed.isnka9k9,devseed.068dce72,devseed.nepal-admin-boundaries,mapbox.mapbox-streets-v5"
 styles: 
   - style.mss
   - population.mss

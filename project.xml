@@ -5,12 +5,12 @@
 <Parameters>
   <Parameter name="attribution"><![CDATA[<a href="http://www.worldpop.org.uk/" target='_blank'>&copy; WorldPop</a><a href='https://www.mapbox.com/about/maps/' target='_blank'>&copy; Mapbox &copy; OpenStreetMap</a> <a class='mapbox-improve-map' href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a>]]></Parameter>
   <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
-  <Parameter name="center">85.3397,27.6817,11</Parameter>
+  <Parameter name="center">45.3076,23.8858,6</Parameter>
   <Parameter name="format">png8:m=h</Parameter>
   <Parameter name="maxzoom">22</Parameter>
   <Parameter name="minzoom">0</Parameter>
   <Parameter name="name"><![CDATA[worldpop - basemap]]></Parameter>
-  <Parameter name="source"><![CDATA[mapbox:///devseed.e0v5z5mi,devseed.oexqd7vi,devseed.nepal-admin-boundaries,mapbox.mapbox-streets-v5]]></Parameter>
+  <Parameter name="source"><![CDATA[mapbox:///devseed.isnka9k9,devseed.068dce72,devseed.nepal-admin-boundaries,mapbox.mapbox-streets-v5]]></Parameter>
 </Parameters>
 
 <FontSet name="fontset-0">
@@ -35,7 +35,7 @@
 </FontSet>
 <Style name="coverage" filter-mode="first">
   <Rule>
-    <PolygonSymbolizer fill="#c18989" />
+    <PolygonSymbolizer fill="#c9a7a7" />
   </Rule>
 </Style>
 <Layer name="coverage"
@@ -44,41 +44,103 @@
 
 <Style name="population" filter-mode="first">
   <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
     <Filter>([density] &gt;= 256)</Filter>
     <PolygonSymbolizer fill="#511414" />
   </Rule>
   <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
     <Filter>([density] &gt;= 128)</Filter>
     <PolygonSymbolizer fill="#601f1f" />
   </Rule>
   <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
     <Filter>([density] &gt;= 64)</Filter>
     <PolygonSymbolizer fill="#702b2b" />
   </Rule>
   <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
     <Filter>([density] &gt;= 32)</Filter>
     <PolygonSymbolizer fill="#823b3b" />
   </Rule>
   <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
     <Filter>([density] &gt;= 16)</Filter>
     <PolygonSymbolizer fill="#914d4d" />
   </Rule>
   <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
     <Filter>([density] &gt;= 8)</Filter>
     <PolygonSymbolizer fill="#a35d5d" />
   </Rule>
   <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
     <Filter>([density] &gt;= 4)</Filter>
     <PolygonSymbolizer fill="#b27070" />
   </Rule>
   <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
     <Filter>([density] &gt;= 2)</Filter>
     <PolygonSymbolizer fill="#c18989" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <PolygonSymbolizer fill="#c9a7a7" />
   </Rule>
 </Style>
 <Layer name="population"
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
     <StyleName>population</StyleName>  </Layer>
+
+<Style name="population-grid" filter-mode="first">
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([density] &gt;= 256)</Filter>
+    <PolygonSymbolizer fill="#511414" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([density] &gt;= 128)</Filter>
+    <PolygonSymbolizer fill="#601f1f" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([density] &gt;= 64)</Filter>
+    <PolygonSymbolizer fill="#702b2b" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([density] &gt;= 32)</Filter>
+    <PolygonSymbolizer fill="#823b3b" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([density] &gt;= 16)</Filter>
+    <PolygonSymbolizer fill="#914d4d" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([density] &gt;= 8)</Filter>
+    <PolygonSymbolizer fill="#a35d5d" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([density] &gt;= 4)</Filter>
+    <PolygonSymbolizer fill="#b27070" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([density] &gt;= 2)</Filter>
+    <PolygonSymbolizer fill="#c18989" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <PolygonSymbolizer fill="#c9a7a7" />
+  </Rule>
+</Style>
+<Layer name="population-grid"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>population-grid</StyleName>  </Layer>
 
 <Style name="npl-admin-2" filter-mode="first">
   <Rule>

@@ -6,6 +6,7 @@
 @scale-3: #A35D5D;
 @scale-2: #B27070;
 @scale-1: #C18989;
+@scale-0: #c9a7a7;
 
 @break-8: 256;
 @break-7: 128;
@@ -17,16 +18,18 @@
 @break-1: 2;
 
 #coverage {
-  polygon-fill: @scale-1;
+  polygon-fill: @scale-0;
 }
 
-#population {
-  [density>=@break-1] { polygon-fill: @scale-1; }
-  [density>=@break-2] { polygon-fill: @scale-2; }
-  [density>=@break-3] { polygon-fill: @scale-3; }
-  [density>=@break-4] { polygon-fill: @scale-4; }
-  [density>=@break-5] { polygon-fill: @scale-5; }
-  [density>=@break-6] { polygon-fill: @scale-6; }
-  [density>=@break-7] { polygon-fill: @scale-7; }
-  [density>=@break-8] { polygon-fill: @scale-8; }
+#population[zoom >= 11],
+#population-grid[zoom < 11] {
+    polygon-fill: @scale-0;
+    [density>=@break-1] { polygon-fill: @scale-1; }
+    [density>=@break-2] { polygon-fill: @scale-2; }
+    [density>=@break-3] { polygon-fill: @scale-3; }
+    [density>=@break-4] { polygon-fill: @scale-4; }
+    [density>=@break-5] { polygon-fill: @scale-5; }
+    [density>=@break-6] { polygon-fill: @scale-6; }
+    [density>=@break-7] { polygon-fill: @scale-7; }
+    [density>=@break-8] { polygon-fill: @scale-8; }
 }
