@@ -4,8 +4,6 @@
 */
 // Languages: name (local), name_en, name_fr, name_es, name_de
 @name: '[name_en]';
-//butts//
-
 
 // Fonts //
 @fallback: 'Open Sans Regular';

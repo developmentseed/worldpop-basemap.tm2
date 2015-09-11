@@ -5,7 +5,7 @@
 <Parameters>
   <Parameter name="attribution"><![CDATA[<a href="http://www.worldpop.org.uk/" target='_blank'>&copy; WorldPop</a><a href='https://www.mapbox.com/about/maps/' target='_blank'>&copy; Mapbox &copy; OpenStreetMap</a> <a class='mapbox-improve-map' href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a>]]></Parameter>
   <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
-  <Parameter name="center">89.6237,22.6951,9</Parameter>
+  <Parameter name="center">60.4688,15.623,2</Parameter>
   <Parameter name="format">png8:m=h</Parameter>
   <Parameter name="maxzoom">14</Parameter>
   <Parameter name="minzoom">2</Parameter>
