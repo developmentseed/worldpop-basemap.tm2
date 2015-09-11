@@ -1,11 +1,9 @@
-
-
 // Country labels //
 #country_label[zoom>=3] {
   text-name: @name;
   text-face-name: @sans_bd;
   text-fill: @text;
-  text-size: 12;
+  text-size: 10;
   text-halo-fill: @land;
   text-halo-opacity: .333;
   text-halo-radius: 1;
@@ -32,7 +30,7 @@
 #country_label_line { 
   line-color: @text;
   line-dasharray: 3,3;
-  line-width: 1;
+  line-width: .7;
 }
 
 
@@ -51,7 +49,7 @@
     shield-transform:scale(0.3,0.3);
     shield-unlock-image: true;
     shield-name: @name;
-    shield-size: 12;
+    shield-size: 10;
     shield-face-name: @sans;
     shield-placement: point;
     shield-fill: @text;
@@ -60,7 +58,7 @@
     shield-halo-opacity: .333;
     shield-margin:30;
     shield-opacity:0.5;
-    [zoom=7] { shield-size: 14; }
+    [zoom=7] { shield-size: 12; }
 
     [ldir='E'] { shield-text-dx: 5; }
     [ldir='W'] { shield-text-dx: -5; }
@@ -79,15 +77,15 @@
   text-wrap-width: 80;
   text-wrap-before: true;
   text-fill: @text;
-  text-halo-fill: darken(@fill1, 15%);
-  text-halo-opacity: 1;
+  text-halo-fill: darken(#fff, 1%);
+  text-halo-opacity: .7;
   text-halo-radius: 1;
   text-size: 10;
   text-line-spacing:-2;
   text-margin:25;
   
   [zoom>=10] {
-    text-halo-fill: darken(@fill1, 20%);
+    text-halo-fill: darken(#fff, 1%);
   }
 
   // Cities
@@ -156,18 +154,22 @@
 }
 
 // Water labels
-#marine_label { 
+#marine_label {
+  [labelrank=1][zoom>=2]{
   text-name: @name;
   text-face-name: @sans_bd;
-  text-fill: @text;
+  text-fill: #959595;
   text-size: 12;
-  text-halo-fill: @water;
-  text-halo-radius: 1;
-  text-halo-opacity: .333;
   text-wrap-before: true;
   text-wrap-width: 90;
-  [labelrank=1] {
-   text-size: 18;
+  }
+  [zoom>=5]{
+  text-name: @name;
+  text-face-name: @sans_bd;
+  text-fill: #959595;
+  text-size: 10;
+  text-wrap-before: true;
+  text-wrap-width: 90;
   }
 }
 

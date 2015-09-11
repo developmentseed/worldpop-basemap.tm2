@@ -4,6 +4,8 @@
 */
 // Languages: name (local), name_en, name_fr, name_es, name_de
 @name: '[name_en]';
+//butts//
+
 
 // Fonts //
 @fallback: 'Open Sans Regular';
@@ -42,10 +44,10 @@ Map {
 #admin[admin_level=2][maritime=0] {
   line-join: round;
   line-color: @fill5;
-  line-width: 1;
-  [zoom>=5] { line-width: 1.4; }
-  [zoom>=6] { line-width: 1.8; }
-  [zoom>=8] { line-width: 2; }
+  line-width: .2;
+  [zoom>=5] { line-width: .4; }
+  [zoom>=6] { line-width: .8; }
+  [zoom>=8] { line-width: .4; }
   [zoom>=10] { line-width: 3; }
   [disputed=1] { line-dasharray: 4,4; }
 }
@@ -53,10 +55,10 @@ Map {
 #admin[admin_level>2][maritime=0] {
   line-join: round;
   line-color: @fill5;
-  line-width: 1;
+  line-width: .3;
   line-dasharray: 3,2;
-  [zoom>=6] { line-width: 1.5; }
-  [zoom>=8] { line-width: 1.8; }
+  [zoom>=6] { line-width: .5; }
+  [zoom>=8] { line-width: 1.2; }
 }
 
 // ****************

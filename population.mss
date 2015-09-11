@@ -1,12 +1,13 @@
-@scale-8: #511414;
-@scale-7: #601F1F;
-@scale-6: #702B2B;
-@scale-5: #823B3B;
-@scale-4: #914D4D;
-@scale-3: #A35D5D;
-@scale-2: #B27070;
-@scale-1: #C18989;
-@scale-0: #c9a7a7;
+@scale-8: #084081;
+@scale-7: #0868ac;
+@scale-6: #2b8cbe;
+@scale-5: #4eb3d3;
+@scale-4: #7bccc4;
+@scale-3: #a8ddb5;
+@scale-2: #ccebc5;
+@scale-1: #e0f3db;
+@scale-0: #f7fcf0;
+
 
 @break-8: 256;
 @break-7: 128;
