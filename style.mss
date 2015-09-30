@@ -67,7 +67,7 @@ Map {
 #npl-admin-4,
 #npl-admin-5 {
   line-join: round;
-  line-color: darken(@fill5, 10%);
+  line-color: darken(@fill5, 10.1%);
   line-width: 0;
 }
 
