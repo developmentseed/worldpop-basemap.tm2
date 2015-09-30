@@ -12,16 +12,16 @@
 @sans_bd: 'Open Sans Bold','Arial Unicode MS Bold';
 @sans_it: 'Open Sans Italic', 'Arial Unicode MS Regular';
 @sans_bdit: 'Open Sans Bold Italic','Arial Unicode MS Bold';
-
+ 
 /*
 This style is designed to be easily recolored by adjusting the color
 variables below. For predicatable feature relationships,
 maintain or invert existing value (light to dark) scale.
 */
 
-// Color palette //
+// Color palette // 
 @road:  #fff;
-@land:  #eee;
+@land:  #edebe6;
 // just for waterways (for bodies of water, see #water below)
 @water: lighten(#2e2e2e, 30%);
 
@@ -67,7 +67,7 @@ Map {
 #npl-admin-4,
 #npl-admin-5 {
   line-join: round;
-  line-color: darken(@fill5, 10%);
+  line-color: darken(@fill5, 10.1%);
   line-width: 0;
 }
 
@@ -128,11 +128,11 @@ Map {
   }
 }
 
+@mainwater: #d1e0e4;
 // Water Features //
 #water {
   ::shadow {
-    polygon-fill: mix(@land,@fill4,75);
-    
+    polygon-fill: mix(@mainwater,@fill4,80);
   }
   ::fill {
     // a fill and overlay comp-op lighten the polygon-
