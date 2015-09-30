@@ -19,9 +19,9 @@ variables below. For predicatable feature relationships,
 maintain or invert existing value (light to dark) scale.
 */
 
-// Color palette //
+// Color palette // 
 @road:  #fff;
-@land:  #eee;
+@land:  #edebe6;
 // just for waterways (for bodies of water, see #water below)
 @water: lighten(#2e2e2e, 30%);
 
@@ -128,11 +128,11 @@ Map {
   }
 }
 
+@mainwater: #d1e0e4;
 // Water Features //
 #water {
   ::shadow {
-    polygon-fill: mix(@land,@fill4,75);
-    
+    polygon-fill: mix(@mainwater,@fill4,80);
   }
   ::fill {
     // a fill and overlay comp-op lighten the polygon-
