@@ -12,7 +12,7 @@
 @sans_bd: 'Open Sans Bold','Arial Unicode MS Bold';
 @sans_it: 'Open Sans Italic', 'Arial Unicode MS Regular';
 @sans_bdit: 'Open Sans Bold Italic','Arial Unicode MS Bold';
-
+ 
 /*
 This style is designed to be easily recolored by adjusting the color
 variables below. For predicatable feature relationships,
